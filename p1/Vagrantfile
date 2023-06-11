@@ -1,12 +1,28 @@
-Vagrant.configure("2") do |config|
-  config.vm.box = "generic/alpine38"
 
+cpus           = ENV['CPUS'] || 2
+memory         = ENV['MEMORY'] || 2048
+
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "generic/alpine311"
+  # config.ssh.insert_key = false
+  # config.ssh.keep_alive = true
+  config.ssh.forward_agent = true # Enables agent forwarding over SSH connections.
+  config.ssh.forward_x11 = true # Enables X11 forwarding over SSH connections.
+  config.ssh.keep_alive = true # Sends keep-alive packets to keep connections alive.
+  config.ssh.pty = false # Use pty for provisioning. Bug: mitchellh/vagrant/8118.
+  config.ssh.username = "vagrant"
+  config.ssh.password = "vagrant"
   config.vm.provider "virtualbox" do |vb|
+    # vb.gui = true
     vb.memory = 2048 # Need to up the size or vboxmanage return an error
     vb.cpus = 1
   end
 
-  # Server vm
+  # config.ssh.private_key_path = ["~/.ssh/id_rsa", "~/.vagrant.d/insecure_private_key"]
+  # config.vm.provision "file", source: "~/.ssh/id_rsa.pub", destination: "~/.ssh/authorized_keys"
+
+  # # Server vm
   config.vm.define "fcatinauS" do |fcatinauS|
     fcatinauS.vm.hostname = "fcatinauS" # Define the hostname of the vm
     fcatinauS.vm.synced_folder ".", "/vagrant"  # Is the same of the volume for docker
@@ -15,11 +31,11 @@ Vagrant.configure("2") do |config|
   end
 
   # # Worker vm
-  # config.vm.define "fcatinauSW" do |fcatinauSW|
-  #     fcatinauSW.vm.hostname = "fcatinauSW"
-  #     fcatinauSW.vm.synced_folder ".", "/vagrant"
-  #     fcatinauSW.vm.network "private_network", ip: 192,168,56,111
-  #     fcatinauSW.vm.provision "shell", privileged: true, path: "scripts/worker.sh", args: ["192.168.56.110", "192.168.56.111"]
-  # end
+  config.vm.define "fcatinauSW" do |fcatinauSW|
+      fcatinauSW.vm.hostname = "fcatinauSW"
+      fcatinauSW.vm.synced_folder ".", "/vagrant"
+      fcatinauSW.vm.network "private_network", ip: "192.168.56.111"
+      fcatinauSW.vm.provision "shell", privileged: true, path: "scripts/worker.sh", args: ["192.168.56.110", "192.168.56.111"]
+  end
 
 end
