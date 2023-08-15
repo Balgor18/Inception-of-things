@@ -16,5 +16,6 @@ Vagrant.configure("2") do |config|
             fcatinauS.vm.hostname = SERVER_NAME
             fcatinauS.vm.synced_folder ".", "/vagrant"
             fcatinauS.vm.network "private_network", ip: SERVER_IP
+            fcatinauS.vm.provision "shell", privileged: true, path: "./scripts/k3s_config.sh", args: [SERVER_IP]
         end
     end
