@@ -6,12 +6,12 @@ metadata:
   labels:
     app: app-1
 spec:
-  type: NodePort
-  selector:
-    app: app-1
   ports:
     - port: 80
       targetPort: 8080
+  selector:
+    app: app-1
+  type: NodePort
 ---
 apiVersion: v1
 kind: Service
@@ -20,12 +20,12 @@ metadata:
   labels:
     app: app-2
 spec:
-  selector:
-    app: app-2
-  type: NodePort
   ports:
     - port: 80
       targetPort: 8080
+  selector:
+    app: app-2
+  type: NodePort
 ---
 apiVersion: v1
 kind: Service
@@ -34,10 +34,10 @@ metadata:
   labels:
     app: app-3
 spec:
-  selector:
-    app: app-3
-  type: NodePort
   ports:
     - port: 80
       targetPort: 8080
+  selector:
+    app: app-3
+  type: NodePort
 ---

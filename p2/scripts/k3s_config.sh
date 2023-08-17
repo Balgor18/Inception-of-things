@@ -22,6 +22,10 @@ sleep 10
 echo "[INFO]  Doing some sleep to wait for k3s to be ready"
 sleep 10
 
+/usr/local/bin/kubectl config set-context --current --namespace=kube-system
+
+
+
 echo "[INFO]  STARTING APP DEPLOYMENT"
 /usr/local/bin/k3s kubectl apply -f /vagrant/scripts/service.yml; sleep 2
 echo "[INFO]  STARTING APP DEPLOYMENT"
