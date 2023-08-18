@@ -15,6 +15,8 @@ Vagrant.configure("2") do |config|
       fcatinauS.vm.hostname = SERVER_NAME
       fcatinauS.vm.synced_folder ".", "/vagrant"
       fcatinauS.vm.network "private_network", ip: SERVER_IP
-      fcatinauS.vm.provision "shell", privileged: true, path: "install/script_dependency.sh"
+      fcatinauS.vm.provision "shell", privileged: true, path: "install/k3s_master.sh"
+      fcatinauS.vm.provision "shell", privileged: true, path: "install/k3d_dependency.sh"
+      fcatinauS.vm.provision "shell", privileged: true, path: "install/setup.sh"
   end
 end
