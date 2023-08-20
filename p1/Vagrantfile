@@ -9,22 +9,10 @@ SERVER_IP      = "192.168.56.110"
 WORKER_IP      = "192.168.56.111"
 Vagrant.configure("2") do |config|
   config.vm.box = BOX
-  # config.ssh.insert_key = false
-  # config.ssh.keep_alive = true
-  config.ssh.forward_agent = true # Enables agent forwarding over SSH connections.
-  config.ssh.forward_x11 = true # Enables X11 forwarding over SSH connections.
-  config.ssh.keep_alive = true # Sends keep-alive packets to keep connections alive.
-  config.ssh.pty = false # Use pty for provisioning. Bug: mitchellh/vagrant/8118.
-  config.ssh.username = "vagrant"
-  config.ssh.password = "vagrant"
   config.vm.provider "virtualbox" do |vb|
-    # vb.gui = true
     vb.memory = memory # Need to up the size or vboxmanage return an error
     vb.cpus = cpus
   end
-
-  # config.ssh.private_key_path = ["~/.ssh/id_rsa", "~/.vagrant.d/insecure_private_key"]
-  # config.vm.provision "file", source: "~/.ssh/id_rsa.pub", destination: "~/.ssh/authorized_keys"
 
   # # Server vm
   config.vm.define SERVER_NAME do |fcatinauS|
