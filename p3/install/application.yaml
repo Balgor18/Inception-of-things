@@ -1,19 +1,18 @@
-apiVersion: argoproj.io/v1apha1
+apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: wil42/playground
+  name: wil-app
   namespace: argocd
 spec:
   project: default
   source :
+    path: dev
     repoURL: https://github.com/Balgor18/viporten_IOT_P3.git # link to github
     targetRevision: HEAD
-    path: dev
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: dev
-  syncOption:
+  syncPolicy:
     automated:
-      seflHeal:true
-      prune:true
-  
+      selfHeal: true
+      prune: true

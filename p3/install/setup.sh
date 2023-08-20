@@ -18,10 +18,13 @@ echo "###################### Deploy script ######################"
 
 # Boucle while to wait pod ready
 while [[ $(kubectl get pods -n argocd -o 'jsonpath={..status.conditions[?(@.type=="Ready")].status}' 2> /dev/null) != "True True True True True True True" ]]; \
- do echo "Waiting all pods to be ready..." && sleep 10; done
+ do echo "Waiting pods is starting..." && sleep 15; done
 
-echo "Done"
+echo "All pods is ready"
 
-# k apply -f application.yaml
+echo "Launch the application"
+kubectl apply -f /vagrant/install/application.yaml
 
-# https://github.com/Balgor18/viporten_IOT_P3.git # Project link
+kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
+
+kubectl port-forward --address 0.0.0.0 svc/argocd-server -n argocd 8080:443
