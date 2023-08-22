@@ -5,8 +5,8 @@ curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scrip
 chmod 700 get_helm.sh
 ./get_helm.sh
 
-echo "###################### Install postgrel ######################"
-sudo helm install my-release oci://registry-1.docker.io/bitnamicharts/postgresql
+# echo "###################### Install postgrel ######################"
+# sudo helm install my-release oci://registry-1.docker.io/bitnamicharts/postgresql
 
 echo "###################### Install Gitlab ######################"
 kubectl create namespace gitlab
@@ -16,7 +16,7 @@ sudo helm repo update
 
 sudo helm upgrade --install gitlab gitlab/gitlab \
   --timeout 600s \
-  --set global.hosts.domain=fcatinau.com \
+  --set global.hosts.domain=gitlab.fcatinau.com \
   --set global.hosts.externalIP=192.168.56.110 \
   --set certmanager-issuer.email=fcatinau@student.42.fr \
   --set global.hosts.https="false"\
