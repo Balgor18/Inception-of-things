@@ -1,6 +1,6 @@
 SERVER_IP = "192.168.56.110"
 SERVER_NAME = "fcatinauS"
-cpus           = ENV['CPUS'] || 6
+cpus           = ENV['CPUS'] || 8
 memory         = ENV['MEMORY'] || 10240
 BOX            = ENV['VERSION'] || "ubuntu/lunar64"
 
