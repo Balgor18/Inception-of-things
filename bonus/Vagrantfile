@@ -1,7 +1,7 @@
 SERVER_IP = "192.168.56.110"
 SERVER_NAME = "fcatinauS"
 cpus           = ENV['CPUS'] || 6
-memory         = ENV['MEMORY'] || 6144
+memory         = ENV['MEMORY'] || 10240
 BOX            = ENV['VERSION'] || "ubuntu/lunar64"
 
 Vagrant.configure("2") do |config|

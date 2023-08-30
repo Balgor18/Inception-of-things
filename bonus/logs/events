@@ -1,0 +1,355 @@
+LAST SEEN   TYPE      REASON                         OBJECT                                                   MESSAGE
+41m         Normal    SuccessfulCreate               job/gitlab-shared-secrets-1-jjh-selfsign                 Created pod: gitlab-shared-secrets-1-jjh-selfsign-kt9k5
+41m         Normal    Scheduled                      pod/gitlab-shared-secrets-1-jjh-selfsign-kt9k5           Successfully assigned gitlab/gitlab-shared-secrets-1-jjh-selfsign-kt9k5 to k3d-argocd-server-0
+41m         Normal    Pulling                        pod/gitlab-shared-secrets-1-jjh-selfsign-kt9k5           Pulling image "registry.gitlab.com/gitlab-org/build/cng/cfssl-self-sign:v16.3.0"
+40m         Normal    Pulled                         pod/gitlab-shared-secrets-1-jjh-selfsign-kt9k5           Successfully pulled image "registry.gitlab.com/gitlab-org/build/cng/cfssl-self-sign:v16.3.0" in 17.399311371s
+40m         Normal    Created                        pod/gitlab-shared-secrets-1-jjh-selfsign-kt9k5           Created container cfssl-self-sign
+40m         Normal    Started                        pod/gitlab-shared-secrets-1-jjh-selfsign-kt9k5           Started container cfssl-self-sign
+40m         Normal    Pulling                        pod/gitlab-shared-secrets-1-jjh-selfsign-kt9k5           Pulling image "registry.gitlab.com/gitlab-org/build/cng/kubectl:v16.3.0"
+40m         Normal    Pulled                         pod/gitlab-shared-secrets-1-jjh-selfsign-kt9k5           Successfully pulled image "registry.gitlab.com/gitlab-org/build/cng/kubectl:v16.3.0" in 18.915636485s
+40m         Normal    Created                        pod/gitlab-shared-secrets-1-jjh-selfsign-kt9k5           Created container kubectl
+40m         Normal    Started                        pod/gitlab-shared-secrets-1-jjh-selfsign-kt9k5           Started container kubectl
+40m         Normal    Completed                      job/gitlab-shared-secrets-1-jjh-selfsign                 Job completed
+40m         Normal    SuccessfulCreate               job/gitlab-shared-secrets-1-vft                          Created pod: gitlab-shared-secrets-1-vft-gbsph
+40m         Normal    Scheduled                      pod/gitlab-shared-secrets-1-vft-gbsph                    Successfully assigned gitlab/gitlab-shared-secrets-1-vft-gbsph to k3d-argocd-server-0
+40m         Normal    Pulled                         pod/gitlab-shared-secrets-1-vft-gbsph                    Container image "registry.gitlab.com/gitlab-org/build/cng/kubectl:v16.3.0" already present on machine
+40m         Normal    Created                        pod/gitlab-shared-secrets-1-vft-gbsph                    Created container gitlab
+40m         Normal    Started                        pod/gitlab-shared-secrets-1-vft-gbsph                    Started container gitlab
+40m         Normal    Completed                      job/gitlab-shared-secrets-1-vft                          Job completed
+40m         Normal    Killing                        pod/gitlab-shared-secrets-1-vft-gbsph                    Stopping container gitlab
+40m         Normal    NoPods                         poddisruptionbudget/gitlab-nginx-ingress-controller      No matching pods found
+40m         Normal    NoPods                         poddisruptionbudget/gitlab-gitlab-shell                  No matching pods found
+40m         Normal    NoPods                         poddisruptionbudget/gitlab-kas                           No matching pods found
+40m         Normal    NoPods                         poddisruptionbudget/gitlab-webservice-default            No matching pods found
+40m         Normal    NoPods                         poddisruptionbudget/gitlab-registry-v1                   No matching pods found
+40m         Normal    WaitForFirstConsumer           persistentvolumeclaim/gitlab-minio                       waiting for first consumer to be created before binding
+40m         Normal    NoPods                         poddisruptionbudget/gitlab-minio-v1                      No matching pods found
+40m         Normal    WaitForFirstConsumer           persistentvolumeclaim/gitlab-prometheus-server           waiting for first consumer to be created before binding
+40m         Normal    NoPods                         poddisruptionbudget/gitlab-sidekiq-all-in-1-v1           No matching pods found
+40m         Normal    NoPods                         poddisruptionbudget/gitlab-gitaly                        No matching pods found
+40m         Normal    ScalingReplicaSet              deployment/gitlab-toolbox                                Scaled up replica set gitlab-toolbox-54f756b5f to 1
+40m         Normal    ScalingReplicaSet              deployment/gitlab-certmanager                            Scaled up replica set gitlab-certmanager-f6f9d45f5 to 1
+40m         Normal    SuccessfulCreate               replicaset/gitlab-toolbox-54f756b5f                      Created pod: gitlab-toolbox-54f756b5f-kplfs
+40m         Normal    ScalingReplicaSet              deployment/gitlab-kas                                    Scaled up replica set gitlab-kas-df78c7cb5 to 1
+40m         Normal    SuccessfulCreate               replicaset/gitlab-certmanager-f6f9d45f5                  Created pod: gitlab-certmanager-f6f9d45f5-b2pqc
+40m         Normal    Scheduled                      pod/gitlab-certmanager-f6f9d45f5-b2pqc                   Successfully assigned gitlab/gitlab-certmanager-f6f9d45f5-b2pqc to k3d-argocd-server-0
+40m         Normal    Scheduled                      pod/gitlab-kas-df78c7cb5-lbpr4                           Successfully assigned gitlab/gitlab-kas-df78c7cb5-lbpr4 to k3d-argocd-server-0
+40m         Normal    Scheduled                      pod/gitlab-toolbox-54f756b5f-kplfs                       Successfully assigned gitlab/gitlab-toolbox-54f756b5f-kplfs to k3d-argocd-server-0
+40m         Normal    SuccessfulCreate               replicaset/gitlab-kas-df78c7cb5                          Created pod: gitlab-kas-df78c7cb5-lbpr4
+40m         Normal    ScalingReplicaSet              deployment/gitlab-sidekiq-all-in-1-v2                    Scaled up replica set gitlab-sidekiq-all-in-1-v2-58f8865d9b to 1
+40m         Normal    Scheduled                      pod/svclb-gitlab-nginx-ingress-controller-cbsn8          Successfully assigned gitlab/svclb-gitlab-nginx-ingress-controller-cbsn8 to k3d-argocd-server-0
+40m         Normal    Scheduled                      pod/gitlab-sidekiq-all-in-1-v2-58f8865d9b-b9f5w          Successfully assigned gitlab/gitlab-sidekiq-all-in-1-v2-58f8865d9b-b9f5w to k3d-argocd-server-0
+40m         Normal    SuccessfulCreate               daemonset/svclb-gitlab-nginx-ingress-controller          Created pod: svclb-gitlab-nginx-ingress-controller-cbsn8
+40m         Normal    ScalingReplicaSet              deployment/gitlab-prometheus-server                      Scaled up replica set gitlab-prometheus-server-5cff966f7f to 1
+40m         Normal    SuccessfulCreate               replicaset/gitlab-prometheus-server-5cff966f7f           Created pod: gitlab-prometheus-server-5cff966f7f-rdrqf
+40m         Normal    SuccessfulCreate               job/gitlab-migrations-1                                  Created pod: gitlab-migrations-1-9qfs5
+40m         Normal    Scheduled                      pod/gitlab-webservice-default-68595dccd6-q4nxc           Successfully assigned gitlab/gitlab-webservice-default-68595dccd6-q4nxc to k3d-argocd-server-0
+40m         Normal    ScalingReplicaSet              deployment/gitlab-webservice-default                     Scaled up replica set gitlab-webservice-default-68595dccd6 to 1
+40m         Normal    Scheduled                      pod/gitlab-migrations-1-9qfs5                            Successfully assigned gitlab/gitlab-migrations-1-9qfs5 to k3d-argocd-server-0
+40m         Normal    SuccessfulCreate               job/gitlab-minio-create-buckets-1                        Created pod: gitlab-minio-create-buckets-1-zv9qz
+40m         Normal    SuccessfulCreate               replicaset/gitlab-sidekiq-all-in-1-v2-58f8865d9b         Created pod: gitlab-sidekiq-all-in-1-v2-58f8865d9b-b9f5w
+40m         Normal    SuccessfulCreate               statefulset/gitlab-gitaly                                create Claim repo-data-gitlab-gitaly-0 Pod gitlab-gitaly-0 in StatefulSet gitlab-gitaly success
+40m         Normal    Scheduled                      pod/gitlab-minio-create-buckets-1-zv9qz                  Successfully assigned gitlab/gitlab-minio-create-buckets-1-zv9qz to k3d-argocd-server-0
+40m         Normal    ScalingReplicaSet              deployment/gitlab-nginx-ingress-controller               Scaled up replica set gitlab-nginx-ingress-controller-6598766ffc to 2
+40m         Normal    SuccessfulCreate               replicaset/gitlab-webservice-default-68595dccd6          Created pod: gitlab-webservice-default-68595dccd6-q4nxc
+40m         Normal    Provisioning                   persistentvolumeclaim/gitlab-prometheus-server           External provisioner is provisioning volume for claim "gitlab/gitlab-prometheus-server"
+40m         Normal    SuccessfulCreate               statefulset/gitlab-postgresql                            create Claim data-gitlab-postgresql-0 Pod gitlab-postgresql-0 in StatefulSet gitlab-postgresql success
+40m         Normal    Scheduled                      pod/gitlab-nginx-ingress-controller-6598766ffc-t6fhz     Successfully assigned gitlab/gitlab-nginx-ingress-controller-6598766ffc-t6fhz to k3d-argocd-server-0
+40m         Normal    ScalingReplicaSet              deployment/gitlab-registry                               Scaled up replica set gitlab-registry-8494b695d8 to 1
+40m         Warning   FailedMount                    pod/gitlab-kas-df78c7cb5-lbpr4                           MountVolume.SetUp failed for volume "init-etc-kas" : failed to sync configmap cache: timed out waiting for the condition
+40m         Normal    Scheduled                      pod/gitlab-registry-8494b695d8-jtqvx                     Successfully assigned gitlab/gitlab-registry-8494b695d8-jtqvx to k3d-argocd-server-0
+40m         Normal    WaitForFirstConsumer           persistentvolumeclaim/repo-data-gitlab-gitaly-0          waiting for first consumer to be created before binding
+40m         Normal    SuccessfulCreate               replicaset/gitlab-nginx-ingress-controller-6598766ffc    Created pod: gitlab-nginx-ingress-controller-6598766ffc-t6fhz
+40m         Normal    ScalingReplicaSet              deployment/gitlab-minio                                  Scaled up replica set gitlab-minio-67f765498c to 1
+40m         Normal    SuccessfulCreate               statefulset/gitlab-redis-master                          create Claim redis-data-gitlab-redis-master-0 Pod gitlab-redis-master-0 in StatefulSet gitlab-redis-master success
+40m         Normal    SuccessfulCreate               replicaset/gitlab-registry-8494b695d8                    Created pod: gitlab-registry-8494b695d8-jtqvx
+40m         Normal    WaitForFirstConsumer           persistentvolumeclaim/data-gitlab-postgresql-0           waiting for first consumer to be created before binding
+40m         Normal    Scheduled                      pod/gitlab-certmanager-cainjector-6cff7d479b-c9vkr       Successfully assigned gitlab/gitlab-certmanager-cainjector-6cff7d479b-c9vkr to k3d-argocd-server-0
+40m         Normal    Scheduled                      pod/gitlab-nginx-ingress-controller-6598766ffc-zjrf8     Successfully assigned gitlab/gitlab-nginx-ingress-controller-6598766ffc-zjrf8 to k3d-argocd-server-0
+40m         Normal    SuccessfulCreate               statefulset/gitlab-gitaly                                create Pod gitlab-gitaly-0 in StatefulSet gitlab-gitaly successful
+40m         Normal    WaitForFirstConsumer           persistentvolumeclaim/redis-data-gitlab-redis-master-0   waiting for first consumer to be created before binding
+40m         Normal    Pulling                        pod/gitlab-toolbox-54f756b5f-kplfs                       Pulling image "registry.gitlab.com/gitlab-org/build/cng/certificates:v16.3.0"
+40m         Normal    SuccessfulCreate               replicaset/gitlab-nginx-ingress-controller-6598766ffc    Created pod: gitlab-nginx-ingress-controller-6598766ffc-zjrf8
+40m         Normal    Scheduled                      pod/gitlab-certmanager-webhook-7bc5bf9846-wm8lt          Successfully assigned gitlab/gitlab-certmanager-webhook-7bc5bf9846-wm8lt to k3d-argocd-server-0
+40m         Normal    ScalingReplicaSet              deployment/gitlab-certmanager-webhook                    Scaled up replica set gitlab-certmanager-webhook-7bc5bf9846 to 1
+40m         Normal    SuccessfulCreate               statefulset/gitlab-postgresql                            create Pod gitlab-postgresql-0 in StatefulSet gitlab-postgresql successful
+40m         Normal    Scheduled                      pod/gitlab-gitlab-exporter-55f9664cfd-9f48t              Successfully assigned gitlab/gitlab-gitlab-exporter-55f9664cfd-9f48t to k3d-argocd-server-0
+40m         Normal    SuccessfulCreate               replicaset/gitlab-minio-67f765498c                       Created pod: gitlab-minio-67f765498c-gzlzp
+40m         Warning   FailedMount                    pod/gitlab-webservice-default-68595dccd6-q4nxc           MountVolume.SetUp failed for volume "webservice-config" : failed to sync configmap cache: timed out waiting for the condition
+40m         Normal    Scheduled                      pod/gitlab-gitlab-shell-7dc4d44bb7-99fnm                 Successfully assigned gitlab/gitlab-gitlab-shell-7dc4d44bb7-99fnm to k3d-argocd-server-0
+40m         Normal    Provisioning                   persistentvolumeclaim/repo-data-gitlab-gitaly-0          External provisioner is provisioning volume for claim "gitlab/repo-data-gitlab-gitaly-0"
+40m         Normal    SuccessfulCreate               replicaset/gitlab-certmanager-webhook-7bc5bf9846         Created pod: gitlab-certmanager-webhook-7bc5bf9846-wm8lt
+40m         Normal    ScalingReplicaSet              deployment/gitlab-gitlab-exporter                        Scaled up replica set gitlab-gitlab-exporter-55f9664cfd to 1
+40m         Normal    SuccessfulCreate               statefulset/gitlab-redis-master                          create Pod gitlab-redis-master-0 in StatefulSet gitlab-redis-master successful
+40m         Normal    Provisioning                   persistentvolumeclaim/data-gitlab-postgresql-0           External provisioner is provisioning volume for claim "gitlab/data-gitlab-postgresql-0"
+40m         Warning   FailedMount                    pod/gitlab-webservice-default-68595dccd6-q4nxc           MountVolume.SetUp failed for volume "init-webservice-secrets" : failed to sync secret cache: timed out waiting for the condition
+40m         Normal    SuccessfulCreate               replicaset/gitlab-certmanager-cainjector-6cff7d479b      Created pod: gitlab-certmanager-cainjector-6cff7d479b-c9vkr
+40m         Warning   FailedMount                    pod/gitlab-sidekiq-all-in-1-v2-58f8865d9b-b9f5w          MountVolume.SetUp failed for volume "sidekiq-config" : failed to sync configmap cache: timed out waiting for the condition
+40m         Warning   FailedMount                    pod/gitlab-webservice-default-68595dccd6-q4nxc           MountVolume.SetUp failed for volume "workhorse-config" : failed to sync configmap cache: timed out waiting for the condition
+40m         Normal    ScalingReplicaSet              deployment/gitlab-certmanager-cainjector                 Scaled up replica set gitlab-certmanager-cainjector-6cff7d479b to 1
+40m         Normal    SuccessfulCreate               replicaset/gitlab-gitlab-exporter-55f9664cfd             Created pod: gitlab-gitlab-exporter-55f9664cfd-9f48t
+40m         Warning   FailedMount                    pod/gitlab-migrations-1-9qfs5                            MountVolume.SetUp failed for volume "migrations-config" : failed to sync configmap cache: timed out waiting for the condition
+40m         Normal    ScalingReplicaSet              deployment/gitlab-gitlab-shell                           Scaled up replica set gitlab-gitlab-shell-7dc4d44bb7 to 1
+40m         Warning   FailedMount                    pod/gitlab-minio-create-buckets-1-zv9qz                  MountVolume.SetUp failed for volume "minio-configuration" : failed to sync configmap cache: timed out waiting for the condition
+40m         Normal    SuccessfulCreate               replicaset/gitlab-gitlab-shell-7dc4d44bb7                Created pod: gitlab-gitlab-shell-7dc4d44bb7-99fnm
+40m         Normal    Provisioning                   persistentvolumeclaim/redis-data-gitlab-redis-master-0   External provisioner is provisioning volume for claim "gitlab/redis-data-gitlab-redis-master-0"
+40m         Warning   FailedMount                    pod/gitlab-migrations-1-9qfs5                            MountVolume.SetUp failed for volume "init-migrations-secrets" : failed to sync secret cache: timed out waiting for the condition
+40m         Normal    Pulling                        pod/gitlab-kas-df78c7cb5-lbpr4                           Pulling image "registry.gitlab.com/gitlab-org/build/cng/certificates:v16.3.0"
+40m         Normal    Pulling                        pod/gitlab-certmanager-f6f9d45f5-b2pqc                   Pulling image "quay.io/jetstack/cert-manager-controller:v1.11.1"
+40m         Normal    Pulling                        pod/gitlab-webservice-default-68595dccd6-q4nxc           Pulling image "registry.gitlab.com/gitlab-org/build/cng/certificates:v16.3.0"
+40m         Warning   FailedMount                    pod/gitlab-registry-8494b695d8-jtqvx                     MountVolume.SetUp failed for volume "registry-secrets" : failed to sync configmap cache: timed out waiting for the condition
+40m         Normal    Pulling                        pod/gitlab-sidekiq-all-in-1-v2-58f8865d9b-b9f5w          Pulling image "registry.gitlab.com/gitlab-org/build/cng/certificates:v16.3.0"
+40m         Normal    Pulling                        pod/gitlab-migrations-1-9qfs5                            Pulling image "registry.gitlab.com/gitlab-org/build/cng/certificates:v16.3.0"
+40m         Normal    SuccessfulCreate               job/gitlab-certmanager-startupapicheck                   Created pod: gitlab-certmanager-startupapicheck-kr8d5
+40m         Normal    Scheduled                      pod/gitlab-certmanager-startupapicheck-kr8d5             Successfully assigned gitlab/gitlab-certmanager-startupapicheck-kr8d5 to k3d-argocd-server-0
+40m         Warning   FailedMount                    pod/gitlab-gitlab-shell-7dc4d44bb7-99fnm                 MountVolume.SetUp failed for volume "shell-init-secrets" : failed to sync secret cache: timed out waiting for the condition
+40m         Warning   FailedMount                    pod/gitlab-gitlab-shell-7dc4d44bb7-99fnm                 MountVolume.SetUp failed for volume "shell-config" : failed to sync configmap cache: timed out waiting for the condition
+40m         Warning   FailedMount                    pod/gitlab-gitlab-exporter-55f9664cfd-9f48t              MountVolume.SetUp failed for volume "gitlab-exporter-config" : failed to sync configmap cache: timed out waiting for the condition
+40m         Warning   FailedMount                    pod/gitlab-gitlab-shell-7dc4d44bb7-99fnm                 MountVolume.SetUp failed for volume "sshd-config" : failed to sync configmap cache: timed out waiting for the condition
+39m         Normal    Pulling                        pod/gitlab-nginx-ingress-controller-6598766ffc-t6fhz     Pulling image "registry.gitlab.com/gitlab-org/cloud-native/mirror/images/ingress-nginx/controller:v1.3.1@sha256:54f7fe2c6c5a9db9a0ebf1131797109bb7a4d91f56b9b362bde2abd237dd1974"
+39m         Normal    Pulling                        pod/gitlab-registry-8494b695d8-jtqvx                     Pulling image "registry.gitlab.com/gitlab-org/build/cng/certificates:v16.3.0"
+39m         Normal    Pulling                        pod/gitlab-minio-create-buckets-1-zv9qz                  Pulling image "minio/mc:RELEASE.2018-07-13T00-53-22Z"
+39m         Normal    Pulling                        pod/svclb-gitlab-nginx-ingress-controller-cbsn8          Pulling image "rancher/klipper-lb:v0.2.0"
+39m         Normal    Pulling                        pod/gitlab-nginx-ingress-controller-6598766ffc-zjrf8     Pulling image "registry.gitlab.com/gitlab-org/cloud-native/mirror/images/ingress-nginx/controller:v1.3.1@sha256:54f7fe2c6c5a9db9a0ebf1131797109bb7a4d91f56b9b362bde2abd237dd1974"
+39m         Normal    Pulling                        pod/gitlab-gitlab-exporter-55f9664cfd-9f48t              Pulling image "registry.gitlab.com/gitlab-org/build/cng/certificates:v16.3.0"
+39m         Normal    Pulling                        pod/gitlab-certmanager-cainjector-6cff7d479b-c9vkr       Pulling image "quay.io/jetstack/cert-manager-cainjector:v1.11.1"
+39m         Normal    Pulling                        pod/gitlab-certmanager-webhook-7bc5bf9846-wm8lt          Pulling image "quay.io/jetstack/cert-manager-webhook:v1.11.1"
+39m         Normal    Pulling                        pod/gitlab-certmanager-startupapicheck-kr8d5             Pulling image "quay.io/jetstack/cert-manager-ctl:v1.11.1"
+39m         Normal    Pulling                        pod/gitlab-gitlab-shell-7dc4d44bb7-99fnm                 Pulling image "registry.gitlab.com/gitlab-org/build/cng/certificates:v16.3.0"
+39m         Normal    SuccessfulRescale              horizontalpodautoscaler/gitlab-gitlab-shell              New size: 2; reason: Current number of replicas below Spec.MinReplicas
+39m         Normal    ScalingReplicaSet              deployment/gitlab-gitlab-shell                           Scaled up replica set gitlab-gitlab-shell-7dc4d44bb7 to 2
+39m         Normal    SuccessfulCreate               replicaset/gitlab-gitlab-shell-7dc4d44bb7                Created pod: gitlab-gitlab-shell-7dc4d44bb7-kp7fr
+39m         Normal    SuccessfulRescale              horizontalpodautoscaler/gitlab-registry                  New size: 2; reason: Current number of replicas below Spec.MinReplicas
+39m         Normal    ScalingReplicaSet              deployment/gitlab-registry                               Scaled up replica set gitlab-registry-8494b695d8 to 2
+39m         Normal    SuccessfulRescale              horizontalpodautoscaler/gitlab-kas                       New size: 2; reason: Current number of replicas below Spec.MinReplicas
+39m         Normal    Scheduled                      pod/gitlab-gitlab-shell-7dc4d44bb7-kp7fr                 Successfully assigned gitlab/gitlab-gitlab-shell-7dc4d44bb7-kp7fr to k3d-argocd-server-0
+39m         Normal    SuccessfulCreate               replicaset/gitlab-registry-8494b695d8                    Created pod: gitlab-registry-8494b695d8-v98dd
+39m         Normal    ScalingReplicaSet              deployment/gitlab-kas                                    Scaled up replica set gitlab-kas-df78c7cb5 to 2
+39m         Normal    Scheduled                      pod/gitlab-registry-8494b695d8-v98dd                     Successfully assigned gitlab/gitlab-registry-8494b695d8-v98dd to k3d-argocd-server-0
+39m         Normal    SuccessfulRescale              horizontalpodautoscaler/gitlab-webservice-default        New size: 2; reason: Current number of replicas below Spec.MinReplicas
+39m         Normal    SuccessfulCreate               replicaset/gitlab-kas-df78c7cb5                          Created pod: gitlab-kas-df78c7cb5-zr7hd
+39m         Normal    Scheduled                      pod/gitlab-kas-df78c7cb5-zr7hd                           Successfully assigned gitlab/gitlab-kas-df78c7cb5-zr7hd to k3d-argocd-server-0
+39m         Normal    ScalingReplicaSet              deployment/gitlab-webservice-default                     Scaled up replica set gitlab-webservice-default-68595dccd6 to 2
+39m         Normal    SuccessfulCreate               replicaset/gitlab-webservice-default-68595dccd6          Created pod: gitlab-webservice-default-68595dccd6-w4xv2
+39m         Warning   FailedScheduling               pod/gitlab-webservice-default-68595dccd6-w4xv2           0/1 nodes are available: 1 Insufficient memory.
+39m         Normal    Pulling                        pod/gitlab-kas-df78c7cb5-zr7hd                           Pulling image "registry.gitlab.com/gitlab-org/build/cng/certificates:v16.3.0"
+39m         Normal    Pulling                        pod/gitlab-gitlab-shell-7dc4d44bb7-kp7fr                 Pulling image "registry.gitlab.com/gitlab-org/build/cng/certificates:v16.3.0"
+39m         Normal    Pulling                        pod/gitlab-registry-8494b695d8-v98dd                     Pulling image "registry.gitlab.com/gitlab-org/build/cng/certificates:v16.3.0"
+39m         Normal    ExternalProvisioning           persistentvolumeclaim/redis-data-gitlab-redis-master-0   waiting for a volume to be created, either by external provisioner "rancher.io/local-path" or manually created by system administrator
+39m         Normal    Pulled                         pod/gitlab-minio-create-buckets-1-zv9qz                  Successfully pulled image "minio/mc:RELEASE.2018-07-13T00-53-22Z" in 46.546465393s
+39m         Normal    Pulled                         pod/gitlab-gitlab-shell-7dc4d44bb7-99fnm                 Successfully pulled image "registry.gitlab.com/gitlab-org/build/cng/certificates:v16.3.0" in 40.672044861s
+39m         Normal    Pulled                         pod/gitlab-sidekiq-all-in-1-v2-58f8865d9b-b9f5w          Successfully pulled image "registry.gitlab.com/gitlab-org/build/cng/certificates:v16.3.0" in 48.325340605s
+39m         Normal    Pulled                         pod/gitlab-registry-8494b695d8-jtqvx                     Successfully pulled image "registry.gitlab.com/gitlab-org/build/cng/certificates:v16.3.0" in 46.870407402s
+39m         Normal    Pulled                         pod/gitlab-webservice-default-68595dccd6-q4nxc           Successfully pulled image "registry.gitlab.com/gitlab-org/build/cng/certificates:v16.3.0" in 48.852507237s
+39m         Normal    Pulled                         pod/gitlab-gitlab-exporter-55f9664cfd-9f48t              Successfully pulled image "registry.gitlab.com/gitlab-org/build/cng/certificates:v16.3.0" in 41.259442361s
+39m         Normal    Pulled                         pod/gitlab-migrations-1-9qfs5                            Successfully pulled image "registry.gitlab.com/gitlab-org/build/cng/certificates:v16.3.0" in 48.138567578s
+39m         Normal    Pulled                         pod/gitlab-kas-df78c7cb5-lbpr4                           Successfully pulled image "registry.gitlab.com/gitlab-org/build/cng/certificates:v16.3.0" in 49.438102064s
+39m         Normal    Pulled                         pod/gitlab-toolbox-54f756b5f-kplfs                       Successfully pulled image "registry.gitlab.com/gitlab-org/build/cng/certificates:v16.3.0" in 50.784996527s
+39m         Normal    Created                        pod/gitlab-minio-create-buckets-1-zv9qz                  Created container minio-mc
+39m         Normal    Pulled                         pod/gitlab-kas-df78c7cb5-zr7hd                           Successfully pulled image "registry.gitlab.com/gitlab-org/build/cng/certificates:v16.3.0" in 16.039118093s
+39m         Normal    Created                        pod/gitlab-gitlab-shell-7dc4d44bb7-99fnm                 Created container certificates
+39m         Normal    Pulled                         pod/gitlab-registry-8494b695d8-v98dd                     Successfully pulled image "registry.gitlab.com/gitlab-org/build/cng/certificates:v16.3.0" in 13.300087942s
+39m         Normal    Pulled                         pod/gitlab-gitlab-shell-7dc4d44bb7-kp7fr                 Successfully pulled image "registry.gitlab.com/gitlab-org/build/cng/certificates:v16.3.0" in 13.322481832s
+39m         Normal    Created                        pod/gitlab-registry-8494b695d8-jtqvx                     Created container certificates
+39m         Normal    Created                        pod/gitlab-sidekiq-all-in-1-v2-58f8865d9b-b9f5w          Created container certificates
+39m         Normal    Created                        pod/gitlab-webservice-default-68595dccd6-q4nxc           Created container certificates
+39m         Normal    Started                        pod/gitlab-gitlab-shell-7dc4d44bb7-99fnm                 Started container certificates
+39m         Normal    Started                        pod/gitlab-registry-8494b695d8-jtqvx                     Started container certificates
+39m         Normal    Started                        pod/gitlab-minio-create-buckets-1-zv9qz                  Started container minio-mc
+39m         Normal    Started                        pod/gitlab-sidekiq-all-in-1-v2-58f8865d9b-b9f5w          Started container certificates
+39m         Normal    Started                        pod/gitlab-webservice-default-68595dccd6-q4nxc           Started container certificates
+39m         Normal    ProvisioningSucceeded          persistentvolumeclaim/redis-data-gitlab-redis-master-0   Successfully provisioned volume pvc-855e6460-aba8-454a-86fe-4e3e68a12a67
+39m         Normal    Created                        pod/gitlab-gitlab-exporter-55f9664cfd-9f48t              Created container certificates
+39m         Normal    Scheduled                      pod/gitlab-redis-master-0                                Successfully assigned gitlab/gitlab-redis-master-0 to k3d-argocd-server-0
+39m         Normal    Provisioning                   persistentvolumeclaim/gitlab-minio                       External provisioner is provisioning volume for claim "gitlab/gitlab-minio"
+39m         Normal    Created                        pod/gitlab-toolbox-54f756b5f-kplfs                       Created container certificates
+39m         Normal    Created                        pod/gitlab-migrations-1-9qfs5                            Created container certificates
+39m         Normal    Created                        pod/gitlab-kas-df78c7cb5-lbpr4                           Created container certificates
+39m         Normal    Created                        pod/gitlab-kas-df78c7cb5-zr7hd                           Created container certificates
+39m         Normal    Created                        pod/gitlab-registry-8494b695d8-v98dd                     Created container certificates
+39m         Normal    Created                        pod/gitlab-gitlab-shell-7dc4d44bb7-kp7fr                 Created container certificates
+39m         Normal    ExternalProvisioning           persistentvolumeclaim/data-gitlab-postgresql-0           waiting for a volume to be created, either by external provisioner "rancher.io/local-path" or manually created by system administrator
+39m         Normal    ExternalProvisioning           persistentvolumeclaim/gitlab-minio                       waiting for a volume to be created, either by external provisioner "rancher.io/local-path" or manually created by system administrator
+39m         Normal    ExternalProvisioning           persistentvolumeclaim/gitlab-prometheus-server           waiting for a volume to be created, either by external provisioner "rancher.io/local-path" or manually created by system administrator
+39m         Normal    Pulled                         pod/svclb-gitlab-nginx-ingress-controller-cbsn8          Successfully pulled image "rancher/klipper-lb:v0.2.0" in 48.601579847s
+39m         Normal    ExternalProvisioning           persistentvolumeclaim/repo-data-gitlab-gitaly-0          waiting for a volume to be created, either by external provisioner "rancher.io/local-path" or manually created by system administrator
+39m         Normal    Started                        pod/gitlab-gitlab-exporter-55f9664cfd-9f48t              Started container certificates
+39m         Normal    Created                        pod/svclb-gitlab-nginx-ingress-controller-cbsn8          Created container lb-port-80
+39m         Normal    Started                        pod/gitlab-migrations-1-9qfs5                            Started container certificates
+39m         Normal    ProvisioningSucceeded          persistentvolumeclaim/gitlab-prometheus-server           Successfully provisioned volume pvc-648dd851-7161-42b1-93c1-67e950d7672f
+39m         Normal    Started                        pod/gitlab-registry-8494b695d8-v98dd                     Started container certificates
+39m         Normal    Started                        pod/gitlab-kas-df78c7cb5-lbpr4                           Started container certificates
+39m         Normal    Started                        pod/gitlab-toolbox-54f756b5f-kplfs                       Started container certificates
+39m         Normal    Scheduled                      pod/gitlab-prometheus-server-5cff966f7f-rdrqf            Successfully assigned gitlab/gitlab-prometheus-server-5cff966f7f-rdrqf to k3d-argocd-server-0
+39m         Normal    Started                        pod/gitlab-kas-df78c7cb5-zr7hd                           Started container certificates
+39m         Normal    Started                        pod/gitlab-gitlab-shell-7dc4d44bb7-kp7fr                 Started container certificates
+39m         Normal    Started                        pod/svclb-gitlab-nginx-ingress-controller-cbsn8          Started container lb-port-80
+39m         Normal    Pulled                         pod/svclb-gitlab-nginx-ingress-controller-cbsn8          Container image "rancher/klipper-lb:v0.2.0" already present on machine
+39m         Normal    Created                        pod/svclb-gitlab-nginx-ingress-controller-cbsn8          Created container lb-port-443
+39m         Normal    Started                        pod/svclb-gitlab-nginx-ingress-controller-cbsn8          Started container lb-port-443
+39m         Normal    Pulled                         pod/svclb-gitlab-nginx-ingress-controller-cbsn8          Container image "rancher/klipper-lb:v0.2.0" already present on machine
+39m         Normal    Created                        pod/svclb-gitlab-nginx-ingress-controller-cbsn8          Created container lb-port-22
+39m         Normal    Pulling                        pod/gitlab-redis-master-0                                Pulling image "docker.io/bitnami/redis:6.2.7-debian-11-r11"
+39m         Normal    Started                        pod/svclb-gitlab-nginx-ingress-controller-cbsn8          Started container lb-port-22
+39m         Normal    ProvisioningSucceeded          persistentvolumeclaim/data-gitlab-postgresql-0           Successfully provisioned volume pvc-719ebe42-f84f-486c-95f1-0d532f66783a
+39m         Normal    Scheduled                      pod/gitlab-postgresql-0                                  Successfully assigned gitlab/gitlab-postgresql-0 to k3d-argocd-server-0
+39m         Normal    ProvisioningSucceeded          persistentvolumeclaim/repo-data-gitlab-gitaly-0          Successfully provisioned volume pvc-580934e8-cdf8-4522-9f5b-4e834a7b3a70
+39m         Normal    Pulling                        pod/gitlab-prometheus-server-5cff966f7f-rdrqf            Pulling image "jimmidyson/configmap-reload:v0.5.0"
+39m         Normal    Scheduled                      pod/gitlab-gitaly-0                                      Successfully assigned gitlab/gitlab-gitaly-0 to k3d-argocd-server-0
+38m         Normal    Pulled                         pod/gitlab-certmanager-f6f9d45f5-b2pqc                   Successfully pulled image "quay.io/jetstack/cert-manager-controller:v1.11.1" in 1m2.620121645s
+38m         Normal    ProvisioningSucceeded          persistentvolumeclaim/gitlab-minio                       Successfully provisioned volume pvc-e11217dd-2f78-4e94-8cd3-90dbd3253152
+38m         Normal    Scheduled                      pod/gitlab-minio-67f765498c-gzlzp                        Successfully assigned gitlab/gitlab-minio-67f765498c-gzlzp to k3d-argocd-server-0
+38m         Normal    Created                        pod/gitlab-certmanager-f6f9d45f5-b2pqc                   Created container certmanager-controller
+38m         Normal    Pulling                        pod/gitlab-postgresql-0                                  Pulling image "docker.io/bitnami/postgresql:14.8.0"
+38m         Normal    Pulling                        pod/gitlab-sidekiq-all-in-1-v2-58f8865d9b-b9f5w          Pulling image "registry.gitlab.com/gitlab-org/build/cng/gitlab-base:v16.3.0"
+38m         Normal    Started                        pod/gitlab-certmanager-f6f9d45f5-b2pqc                   Started container certmanager-controller
+38m         Normal    Pulling                        pod/gitlab-webservice-default-68595dccd6-q4nxc           Pulling image "registry.gitlab.com/gitlab-org/build/cng/gitlab-base:v16.3.0"
+38m         Normal    Pulled                         pod/gitlab-gitaly-0                                      Container image "registry.gitlab.com/gitlab-org/build/cng/certificates:v16.3.0" already present on machine
+38m         Normal    Pulling                        pod/gitlab-minio-67f765498c-gzlzp                        Pulling image "registry.gitlab.com/gitlab-org/build/cng/gitlab-base:v16.3.0"
+38m         Normal    Created                        pod/gitlab-gitaly-0                                      Created container certificates
+38m         Normal    Pulled                         pod/gitlab-certmanager-webhook-7bc5bf9846-wm8lt          Successfully pulled image "quay.io/jetstack/cert-manager-webhook:v1.11.1" in 1m0.393038859s
+38m         Normal    Pulled                         pod/gitlab-certmanager-startupapicheck-kr8d5             Successfully pulled image "quay.io/jetstack/cert-manager-ctl:v1.11.1" in 1m0.413410347s
+38m         Normal    Started                        pod/gitlab-gitaly-0                                      Started container certificates
+38m         Normal    Created                        pod/gitlab-certmanager-webhook-7bc5bf9846-wm8lt          Created container certmanager-webhook
+38m         Normal    Created                        pod/gitlab-certmanager-startupapicheck-kr8d5             Created container certmanager-startupapicheck
+38m         Normal    Pulled                         pod/gitlab-certmanager-cainjector-6cff7d479b-c9vkr       Successfully pulled image "quay.io/jetstack/cert-manager-cainjector:v1.11.1" in 1m1.032717156s
+38m         Normal    Created                        pod/gitlab-certmanager-cainjector-6cff7d479b-c9vkr       Created container certmanager-cainjector
+38m         Normal    Pulling                        pod/gitlab-migrations-1-9qfs5                            Pulling image "registry.gitlab.com/gitlab-org/build/cng/gitlab-base:v16.3.0"
+38m         Normal    Started                        pod/gitlab-certmanager-webhook-7bc5bf9846-wm8lt          Started container certmanager-webhook
+38m         Normal    Started                        pod/gitlab-certmanager-startupapicheck-kr8d5             Started container certmanager-startupapicheck
+38m         Normal    Started                        pod/gitlab-certmanager-cainjector-6cff7d479b-c9vkr       Started container certmanager-cainjector
+38m         Normal    Pulling                        pod/gitlab-gitlab-shell-7dc4d44bb7-99fnm                 Pulling image "registry.gitlab.com/gitlab-org/build/cng/gitlab-base:v16.3.0"
+38m         Normal    Pulling                        pod/gitlab-kas-df78c7cb5-zr7hd                           Pulling image "registry.gitlab.com/gitlab-org/build/cng/gitlab-kas:v16.3.0"
+38m         Normal    Pulling                        pod/gitlab-registry-8494b695d8-jtqvx                     Pulling image "registry.gitlab.com/gitlab-org/build/cng/gitlab-base:v16.3.0"
+38m         Normal    Pulling                        pod/gitlab-kas-df78c7cb5-lbpr4                           Pulling image "registry.gitlab.com/gitlab-org/build/cng/gitlab-kas:v16.3.0"
+38m         Normal    Pulling                        pod/gitlab-registry-8494b695d8-v98dd                     Pulling image "registry.gitlab.com/gitlab-org/build/cng/gitlab-base:v16.3.0"
+38m         Normal    Pulling                        pod/gitlab-gitlab-exporter-55f9664cfd-9f48t              Pulling image "registry.gitlab.com/gitlab-org/build/cng/gitlab-base:v16.3.0"
+38m         Normal    Pulling                        pod/gitlab-toolbox-54f756b5f-kplfs                       Pulling image "registry.gitlab.com/gitlab-org/build/cng/gitlab-base:v16.3.0"
+38m         Normal    Pulling                        pod/gitlab-gitlab-shell-7dc4d44bb7-kp7fr                 Pulling image "registry.gitlab.com/gitlab-org/build/cng/gitlab-base:v16.3.0"
+38m         Normal    Pulling                        pod/gitlab-gitaly-0                                      Pulling image "registry.gitlab.com/gitlab-org/build/cng/gitlab-base:v16.3.0"
+38m         Normal    Pulled                         pod/gitlab-sidekiq-all-in-1-v2-58f8865d9b-b9f5w          Successfully pulled image "registry.gitlab.com/gitlab-org/build/cng/gitlab-base:v16.3.0" in 15.079397965s
+38m         Normal    Completed                      job/gitlab-certmanager-startupapicheck                   Job completed
+38m         Normal    Pulled                         pod/gitlab-minio-67f765498c-gzlzp                        Successfully pulled image "registry.gitlab.com/gitlab-org/build/cng/gitlab-base:v16.3.0" in 18.450277192s
+38m         Normal    Pulled                         pod/gitlab-migrations-1-9qfs5                            Successfully pulled image "registry.gitlab.com/gitlab-org/build/cng/gitlab-base:v16.3.0" in 16.102944447s
+38m         Normal    Pulled                         pod/gitlab-webservice-default-68595dccd6-q4nxc           Successfully pulled image "registry.gitlab.com/gitlab-org/build/cng/gitlab-base:v16.3.0" in 19.311062691s
+38m         Normal    Pulled                         pod/gitlab-gitlab-shell-7dc4d44bb7-99fnm                 Successfully pulled image "registry.gitlab.com/gitlab-org/build/cng/gitlab-base:v16.3.0" in 12.953208048s
+38m         Normal    Pulled                         pod/gitlab-prometheus-server-5cff966f7f-rdrqf            Successfully pulled image "jimmidyson/configmap-reload:v0.5.0" in 27.527160505s
+38m         Normal    Pulled                         pod/gitlab-registry-8494b695d8-jtqvx                     Successfully pulled image "registry.gitlab.com/gitlab-org/build/cng/gitlab-base:v16.3.0" in 13.40826444s
+38m         Normal    Pulled                         pod/gitlab-gitlab-exporter-55f9664cfd-9f48t              Successfully pulled image "registry.gitlab.com/gitlab-org/build/cng/gitlab-base:v16.3.0" in 13.997640775s
+38m         Normal    Pulled                         pod/gitlab-toolbox-54f756b5f-kplfs                       Successfully pulled image "registry.gitlab.com/gitlab-org/build/cng/gitlab-base:v16.3.0" in 13.99255959s
+38m         Normal    Pulled                         pod/gitlab-gitlab-shell-7dc4d44bb7-kp7fr                 Successfully pulled image "registry.gitlab.com/gitlab-org/build/cng/gitlab-base:v16.3.0" in 13.998320914s
+38m         Normal    Created                        pod/gitlab-sidekiq-all-in-1-v2-58f8865d9b-b9f5w          Created container configure
+38m         Normal    Pulled                         pod/gitlab-registry-8494b695d8-v98dd                     Successfully pulled image "registry.gitlab.com/gitlab-org/build/cng/gitlab-base:v16.3.0" in 14.067514402s
+38m         Normal    Created                        pod/gitlab-migrations-1-9qfs5                            Created container configure
+38m         Normal    Started                        pod/gitlab-sidekiq-all-in-1-v2-58f8865d9b-b9f5w          Started container configure
+38m         Normal    Created                        pod/gitlab-prometheus-server-5cff966f7f-rdrqf            Created container prometheus-server-configmap-reload
+38m         Normal    Created                        pod/gitlab-gitlab-shell-7dc4d44bb7-99fnm                 Created container configure
+38m         Normal    Created                        pod/gitlab-webservice-default-68595dccd6-q4nxc           Created container configure
+38m         Normal    Created                        pod/gitlab-minio-67f765498c-gzlzp                        Created container configure
+38m         Normal    Started                        pod/gitlab-webservice-default-68595dccd6-q4nxc           Started container configure
+38m         Normal    Started                        pod/gitlab-gitlab-shell-7dc4d44bb7-99fnm                 Started container configure
+38m         Normal    Started                        pod/gitlab-minio-67f765498c-gzlzp                        Started container configure
+38m         Normal    Started                        pod/gitlab-migrations-1-9qfs5                            Started container configure
+38m         Normal    Created                        pod/gitlab-registry-8494b695d8-jtqvx                     Created container configure
+38m         Normal    Started                        pod/gitlab-prometheus-server-5cff966f7f-rdrqf            Started container prometheus-server-configmap-reload
+38m         Normal    Pulling                        pod/gitlab-prometheus-server-5cff966f7f-rdrqf            Pulling image "quay.io/prometheus/prometheus:v2.38.0"
+38m         Normal    Created                        pod/gitlab-gitlab-shell-7dc4d44bb7-kp7fr                 Created container configure
+38m         Normal    Created                        pod/gitlab-gitlab-exporter-55f9664cfd-9f48t              Created container configure
+38m         Normal    Pulling                        pod/gitlab-sidekiq-all-in-1-v2-58f8865d9b-b9f5w          Pulling image "registry.gitlab.com/gitlab-org/build/cng/gitlab-sidekiq-ee:v16.3.0"
+38m         Normal    Created                        pod/gitlab-toolbox-54f756b5f-kplfs                       Created container configure
+38m         Normal    Created                        pod/gitlab-registry-8494b695d8-v98dd                     Created container configure
+38m         Normal    Pulled                         pod/gitlab-gitaly-0                                      Successfully pulled image "registry.gitlab.com/gitlab-org/build/cng/gitlab-base:v16.3.0" in 13.339526207s
+38m         Normal    Pulling                        pod/gitlab-gitlab-shell-7dc4d44bb7-99fnm                 Pulling image "registry.gitlab.com/gitlab-org/build/cng/gitlab-shell:v14.26.0"
+38m         Normal    Created                        pod/gitlab-gitaly-0                                      Created container configure
+38m         Normal    Started                        pod/gitlab-gitlab-shell-7dc4d44bb7-kp7fr                 Started container configure
+38m         Normal    Started                        pod/gitlab-toolbox-54f756b5f-kplfs                       Started container configure
+38m         Normal    Started                        pod/gitlab-gitlab-exporter-55f9664cfd-9f48t              Started container configure
+38m         Normal    Started                        pod/gitlab-registry-8494b695d8-jtqvx                     Started container configure
+38m         Normal    Started                        pod/gitlab-registry-8494b695d8-v98dd                     Started container configure
+38m         Normal    Pulling                        pod/gitlab-migrations-1-9qfs5                            Pulling image "registry.gitlab.com/gitlab-org/build/cng/gitlab-toolbox-ee:v16.3.0"
+38m         Normal    Started                        pod/gitlab-gitaly-0                                      Started container configure
+38m         Normal    Pulling                        pod/gitlab-minio-67f765498c-gzlzp                        Pulling image "minio/minio:RELEASE.2017-12-28T01-21-00Z"
+38m         Normal    Pulling                        pod/gitlab-gitlab-shell-7dc4d44bb7-kp7fr                 Pulling image "registry.gitlab.com/gitlab-org/build/cng/gitlab-shell:v14.26.0"
+38m         Normal    Pulling                        pod/gitlab-toolbox-54f756b5f-kplfs                       Pulling image "registry.gitlab.com/gitlab-org/build/cng/gitlab-toolbox-ee:v16.3.0"
+38m         Normal    Pulling                        pod/gitlab-gitaly-0                                      Pulling image "registry.gitlab.com/gitlab-org/build/cng/gitaly:v16.3.0"
+38m         Normal    Pulled                         pod/gitlab-redis-master-0                                Successfully pulled image "docker.io/bitnami/redis:6.2.7-debian-11-r11" in 43.605820753s
+37m         Normal    Created                        pod/gitlab-redis-master-0                                Created container redis
+37m         Normal    Started                        pod/gitlab-redis-master-0                                Started container redis
+37m         Normal    Pulled                         pod/gitlab-kas-df78c7cb5-zr7hd                           Successfully pulled image "registry.gitlab.com/gitlab-org/build/cng/gitlab-kas:v16.3.0" in 1m31.524158507s
+37m         Warning   Failed                         pod/gitlab-gitlab-exporter-55f9664cfd-9f48t              Failed to pull image "registry.gitlab.com/gitlab-org/build/cng/gitlab-exporter:13.2.0": rpc error: code = Unknown desc = failed to pull and unpack image "registry.gitlab.com/gitlab-org/build/cng/gitlab-exporter:13.2.0": failed to copy: httpReaderSeeker: failed open: failed to do request: Get "https://registry.gitlab.com/v2/gitlab-org/build/cng/gitlab-exporter/blobs/sha256:60b22c111bc35673b5c9a00395253d9314024c90c91c970bdcd957fcb223d4dd": dial tcp: lookup registry.gitlab.com: no such host
+37m         Warning   Failed                         pod/gitlab-gitlab-exporter-55f9664cfd-9f48t              Error: ErrImagePull
+37m         Warning   Failed                         pod/gitlab-redis-master-0                                Failed to pull image "docker.io/bitnami/redis-exporter:1.43.0-debian-11-r4": rpc error: code = Unknown desc = failed to pull and unpack image "docker.io/bitnami/redis-exporter:1.43.0-debian-11-r4": failed to copy: httpReaderSeeker: failed open: failed to do request: Get "https://registry-1.docker.io/v2/bitnami/redis-exporter/manifests/sha256:09d052f28d17058f4ad571c17151053c14da387b3954d752368f91872e55e321": dial tcp: lookup registry-1.docker.io: no such host
+37m         Warning   Failed                         pod/gitlab-redis-master-0                                Error: ErrImagePull
+37m         Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/gitlab-sidekiq-all-in-1-v2       invalid metrics (1 invalid out of 1), first error is: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+37m         Normal    BackOff                        pod/gitlab-redis-master-0                                Back-off pulling image "docker.io/bitnami/redis-exporter:1.43.0-debian-11-r4"
+37m         Warning   Failed                         pod/gitlab-redis-master-0                                Error: ImagePullBackOff
+36m         Normal    Pulling                        pod/gitlab-gitlab-exporter-55f9664cfd-9f48t              Pulling image "registry.gitlab.com/gitlab-org/build/cng/gitlab-exporter:13.2.0"
+36m         Normal    Pulling                        pod/gitlab-redis-master-0                                Pulling image "docker.io/bitnami/redis-exporter:1.43.0-debian-11-r4"
+36m         Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/gitlab-gitlab-shell              invalid metrics (1 invalid out of 1), first error is: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+36m         Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/gitlab-registry                  invalid metrics (1 invalid out of 1), first error is: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+36m         Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/gitlab-kas                       invalid metrics (1 invalid out of 1), first error is: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+36m         Normal    Pulled                         pod/gitlab-kas-df78c7cb5-lbpr4                           Successfully pulled image "registry.gitlab.com/gitlab-org/build/cng/gitlab-kas:v16.3.0" in 1m59.863848639s
+36m         Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/gitlab-webservice-default        invalid metrics (1 invalid out of 1), first error is: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+36m         Warning   Failed                         pod/gitlab-registry-8494b695d8-jtqvx                     Failed to pull image "registry.gitlab.com/gitlab-org/build/cng/gitlab-container-registry:v3.79.0-gitlab": rpc error: code = Unknown desc = failed to pull and unpack image "registry.gitlab.com/gitlab-org/build/cng/gitlab-container-registry:v3.79.0-gitlab": failed to copy: httpReaderSeeker: failed open: failed to do request: Get "https://registry.gitlab.com/v2/gitlab-org/build/cng/gitlab-container-registry/blobs/sha256:f051596aca1451f3216ff2e1b2139959a9e8e0979b03ef49090354c8aada3328": dial tcp: lookup registry.gitlab.com: Try again
+36m         Warning   Failed                         pod/gitlab-registry-8494b695d8-jtqvx                     Error: ErrImagePull
+36m         Normal    BackOff                        pod/gitlab-registry-8494b695d8-jtqvx                     Back-off pulling image "registry.gitlab.com/gitlab-org/build/cng/gitlab-container-registry:v3.79.0-gitlab"
+36m         Warning   Failed                         pod/gitlab-registry-8494b695d8-jtqvx                     Error: ImagePullBackOff
+36m         Warning   Failed                         pod/gitlab-registry-8494b695d8-v98dd                     Failed to pull image "registry.gitlab.com/gitlab-org/build/cng/gitlab-container-registry:v3.79.0-gitlab": rpc error: code = Unknown desc = failed to pull and unpack image "registry.gitlab.com/gitlab-org/build/cng/gitlab-container-registry:v3.79.0-gitlab": failed to copy: httpReaderSeeker: failed open: failed to do request: Get "https://registry.gitlab.com/v2/gitlab-org/build/cng/gitlab-container-registry/blobs/sha256:8d7ad779c1d8e086d950fc0d3193abe1bbb6d879416754d922e592e1d0e76f80": dial tcp: lookup registry.gitlab.com: Try again
+36m         Warning   Failed                         pod/gitlab-registry-8494b695d8-v98dd                     Error: ErrImagePull
+36m         Normal    BackOff                        pod/gitlab-registry-8494b695d8-v98dd                     Back-off pulling image "registry.gitlab.com/gitlab-org/build/cng/gitlab-container-registry:v3.79.0-gitlab"
+36m         Warning   Failed                         pod/gitlab-registry-8494b695d8-v98dd                     Error: ImagePullBackOff
+36m         Normal    Pulling                        pod/gitlab-registry-8494b695d8-jtqvx                     Pulling image "registry.gitlab.com/gitlab-org/build/cng/gitlab-container-registry:v3.79.0-gitlab"
+36m         Normal    Pulling                        pod/gitlab-registry-8494b695d8-v98dd                     Pulling image "registry.gitlab.com/gitlab-org/build/cng/gitlab-container-registry:v3.79.0-gitlab"
+36m         Normal    Pulled                         pod/gitlab-nginx-ingress-controller-6598766ffc-zjrf8     Successfully pulled image "registry.gitlab.com/gitlab-org/cloud-native/mirror/images/ingress-nginx/controller:v1.3.1@sha256:54f7fe2c6c5a9db9a0ebf1131797109bb7a4d91f56b9b362bde2abd237dd1974" in 3m30.07146005s
+36m         Normal    Pulled                         pod/gitlab-nginx-ingress-controller-6598766ffc-t6fhz     Successfully pulled image "registry.gitlab.com/gitlab-org/cloud-native/mirror/images/ingress-nginx/controller:v1.3.1@sha256:54f7fe2c6c5a9db9a0ebf1131797109bb7a4d91f56b9b362bde2abd237dd1974" in 3m48.326321511s
+36m         Warning   Failed                         pod/gitlab-webservice-default-68595dccd6-q4nxc           Failed to pull image "registry.gitlab.com/gitlab-org/build/cng/gitlab-webservice-ee:v16.3.0": rpc error: code = Unknown desc = failed to pull and unpack image "registry.gitlab.com/gitlab-org/build/cng/gitlab-webservice-ee:v16.3.0": failed to copy: httpReaderSeeker: failed open: failed to do request: Get "https://registry.gitlab.com/v2/gitlab-org/build/cng/gitlab-webservice-ee/blobs/sha256:494475b1601373047bb291cd8533d897785fe15912c7afab4bf8b630e3201768": dial tcp: lookup registry.gitlab.com: Try again
+36m         Warning   Failed                         pod/gitlab-webservice-default-68595dccd6-q4nxc           Error: ErrImagePull
+36m         Normal    BackOff                        pod/gitlab-webservice-default-68595dccd6-q4nxc           Back-off pulling image "registry.gitlab.com/gitlab-org/build/cng/gitlab-webservice-ee:v16.3.0"
+36m         Warning   Failed                         pod/gitlab-webservice-default-68595dccd6-q4nxc           Error: ImagePullBackOff
+35m         Normal    Pulling                        pod/gitlab-webservice-default-68595dccd6-q4nxc           Pulling image "registry.gitlab.com/gitlab-org/build/cng/gitlab-webservice-ee:v16.3.0"
+35m         Normal    Created                        pod/gitlab-nginx-ingress-controller-6598766ffc-zjrf8     Created container controller
+35m         Normal    Started                        pod/gitlab-nginx-ingress-controller-6598766ffc-zjrf8     Started container controller
+35m         Normal    Created                        pod/gitlab-nginx-ingress-controller-6598766ffc-t6fhz     Created container controller
+35m         Normal    Started                        pod/gitlab-nginx-ingress-controller-6598766ffc-t6fhz     Started container controller
+35m         Warning   FailedToUpdateEndpoint         endpoints/gitlab-nginx-ingress-controller                Failed to update endpoint gitlab/gitlab-nginx-ingress-controller: Operation cannot be fulfilled on endpoints "gitlab-nginx-ingress-controller": the object has been modified; please apply your changes to the latest version and try again
+35m         Normal    CREATE                         configmap/gitlab-nginx-ingress-controller                ConfigMap gitlab/gitlab-nginx-ingress-controller
+35m         Normal    CREATE                         configmap/gitlab-nginx-ingress-tcp                       ConfigMap gitlab/gitlab-nginx-ingress-tcp
+35m         Normal    CREATE                         configmap/gitlab-nginx-ingress-controller                ConfigMap gitlab/gitlab-nginx-ingress-controller
+35m         Normal    CREATE                         configmap/gitlab-nginx-ingress-tcp                       ConfigMap gitlab/gitlab-nginx-ingress-tcp
+35m         Normal    Sync                           ingress/gitlab-webservice-default                        Scheduled for sync
+35m         Normal    Sync                           ingress/gitlab-minio                                     Scheduled for sync
+35m         Normal    Sync                           ingress/gitlab-registry                                  Scheduled for sync
+35m         Normal    Sync                           ingress/gitlab-kas                                       Scheduled for sync
+35m         Normal    Sync                           ingress/gitlab-registry                                  Scheduled for sync
+35m         Normal    Sync                           ingress/gitlab-webservice-default                        Scheduled for sync
+35m         Normal    Sync                           ingress/gitlab-minio                                     Scheduled for sync
+35m         Normal    Sync                           ingress/gitlab-kas                                       Scheduled for sync
+35m         Normal    RELOAD                         pod/gitlab-nginx-ingress-controller-6598766ffc-t6fhz     NGINX reload triggered due to a change in configuration
+35m         Normal    RELOAD                         pod/gitlab-nginx-ingress-controller-6598766ffc-zjrf8     NGINX reload triggered due to a change in configuration
+34m         Warning   FailedGetResourceMetric        horizontalpodautoscaler/gitlab-registry                  failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+34m         Normal    Pulled                         pod/gitlab-kas-df78c7cb5-zr7hd                           Container image "registry.gitlab.com/gitlab-org/build/cng/gitlab-kas:v16.3.0" already present on machine
+33m         Normal    Created                        pod/gitlab-kas-df78c7cb5-zr7hd                           Created container kas
+33m         Normal    Started                        pod/gitlab-kas-df78c7cb5-zr7hd                           Started container kas
+33m         Warning   Unhealthy                      pod/gitlab-kas-df78c7cb5-zr7hd                           Readiness probe failed: Get "http://10.42.0.39:8151/readiness": dial tcp 10.42.0.39:8151: connect: connection refused
+33m         Normal    Created                        pod/gitlab-kas-df78c7cb5-lbpr4                           Created container kas
+33m         Normal    Started                        pod/gitlab-kas-df78c7cb5-lbpr4                           Started container kas
+33m         Warning   BackOff                        pod/gitlab-kas-df78c7cb5-zr7hd                           Back-off restarting failed container
+32m         Warning   BackOff                        pod/gitlab-kas-df78c7cb5-lbpr4                           Back-off restarting failed container
+32m         Normal    Pulled                         pod/gitlab-registry-8494b695d8-jtqvx                     Successfully pulled image "registry.gitlab.com/gitlab-org/build/cng/gitlab-container-registry:v3.79.0-gitlab" in 4m26.667880483s
+31m         Normal    Pulled                         pod/gitlab-registry-8494b695d8-v98dd                     Successfully pulled image "registry.gitlab.com/gitlab-org/build/cng/gitlab-container-registry:v3.79.0-gitlab" in 4m50.668132889s
+31m         Normal    Created                        pod/gitlab-registry-8494b695d8-jtqvx                     Created container registry
+31m         Normal    Started                        pod/gitlab-registry-8494b695d8-jtqvx                     Started container registry
+30m         Normal    Pulled                         pod/gitlab-redis-master-0                                Successfully pulled image "docker.io/bitnami/redis-exporter:1.43.0-debian-11-r4" in 5m56.075954227s
+30m         Normal    Created                        pod/gitlab-registry-8494b695d8-v98dd                     Created container registry
+30m         Normal    Started                        pod/gitlab-registry-8494b695d8-v98dd                     Started container registry
+30m         Normal    Created                        pod/gitlab-redis-master-0                                Created container metrics
+30m         Normal    Started                        pod/gitlab-redis-master-0                                Started container metrics
+30m         Normal    Pulled                         pod/gitlab-kas-df78c7cb5-lbpr4                           Container image "registry.gitlab.com/gitlab-org/build/cng/gitlab-kas:v16.3.0" already present on machine
+29m         Warning   FailedGetResourceMetric        horizontalpodautoscaler/gitlab-kas                       failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+24m         Normal    Pulled                         pod/gitlab-gitlab-exporter-55f9664cfd-9f48t              Successfully pulled image "registry.gitlab.com/gitlab-org/build/cng/gitlab-exporter:13.2.0" in 12m48.27700712s
+23m         Normal    Created                        pod/gitlab-gitlab-exporter-55f9664cfd-9f48t              Created container gitlab-exporter
+23m         Normal    Started                        pod/gitlab-gitlab-exporter-55f9664cfd-9f48t              Started container gitlab-exporter
+17m         Warning   FailedScheduling               pod/gitlab-webservice-default-68595dccd6-w4xv2           0/1 nodes are available: 1 Insufficient memory.
+4m42s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/gitlab-gitlab-shell              failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+4m42s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/gitlab-webservice-default        failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+4m42s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/gitlab-sidekiq-all-in-1-v2       failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
