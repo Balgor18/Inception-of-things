@@ -22,6 +22,7 @@ sudo helm upgrade --install gitlab gitlab/gitlab \
   --set global.ingress.configureCertmanager="false"\
   --set global.hosts.externalIP=127.0.0.1 \
   --set global.hosts.https="false"\
+  --set gitlab.gitlab-shell.enabled="false" \
   --set gitlab-runner.install="false" -n gitlab
 
   # --set global.edition=ce \
