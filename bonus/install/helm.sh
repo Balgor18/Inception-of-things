@@ -21,34 +21,16 @@ sudo helm upgrade --install gitlab gitlab/gitlab \
   --set certmanager-issuer.email=fcatinau@student.42.fr \
   --set global.hosts.https=false\
   --set global.ingress.configureCertmanager=false\
-  --set nginx-ingress.controller.hostNetwork=false \
-  --set nginx-ingress.controller.kind=DaemonSet \
   --set gitlab-runner.install="false" -n gitlab
-
-echo "Nique sa mere"
+ 
+  # Normalement pas besoin
+  # --set nginx-ingress.controller.hostNetwork=false \
+  # --set nginx-ingress.controller.kind=DaemonSet \
 
 
 sudo kubectl wait -n gitlab --for=condition=available deployment --all --timeout=-1s
 
 echo "INSHALLAH CA MARCHE"
-  # --set global.shell.port="45"\
-  # --set gitlab.webservice.http.enabled="false"\
-
-# helm install gitlab gitlab/gitlab \
-#   --set global.hosts.domain=mmany.fr \
-#   --set certmanager-issuer.email=mmany@student.42.fr \
-#   --set global.hosts.https="false" \
-#   --set global.ingress.configureCertmanager="false" \
-#   --set gitlab-runner.install="false" \
-#   --set nginx-ingress.controller.hostNetwork=true \
-#   --set nginx-ingress.controller.kind=DaemonSet \
-#   --namespace=gitlab
-
-
-  # --set global.ingress.tls.enabled="false"\
-  # --set global.hosts.externalIP=127.0.0.1 \
-  # --set gitlab.gitlab-shell.enabled="false" \
-  # gitlab.gitlab-shell.enabled
 
   # --set global.edition=ce \
   # --set certmanager-issuer.email=me@example.com \
