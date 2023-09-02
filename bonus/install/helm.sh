@@ -5,15 +5,11 @@ curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scrip
 chmod 700 get_helm.sh
 ./get_helm.sh
 
-# echo "###################### Install postgrel ######################"
-# sudo helm install my-release oci://registry-1.docker.io/bitnamicharts/postgresql
-
 echo "###################### Install Gitlab ######################"
 sudo kubectl create namespace gitlab
 sudo helm repo add gitlab https://charts.gitlab.io/
-# sudo helm search repo gitlab
+
 sudo helm repo update
-sudo helm show values gitlab/gitlab > gitlab/values.yaml
 
 sudo helm upgrade --install gitlab gitlab/gitlab \
   --timeout 600s \
@@ -22,26 +18,13 @@ sudo helm upgrade --install gitlab gitlab/gitlab \
   --set global.hosts.https=false\
   --set global.ingress.configureCertmanager=false\
   --set gitlab-runner.install="false" -n gitlab
- 
-  # Normalement pas besoin
-  # --set nginx-ingress.controller.hostNetwork=false \
-  # --set nginx-ingress.controller.kind=DaemonSet \
 
 
 sudo kubectl wait -n gitlab --for=condition=available deployment --all --timeout=-1s
 
-echo "INSHALLAH CA MARCHE"
-
-  # --set global.edition=ce \
-  # --set certmanager-issuer.email=me@example.com \
-
-echo -n "Gitlab password: "
-
+echo -n "User : root Password : "
 sudo kubectl get secret -n gitlab gitlab-gitlab-initial-root-password -o jsonpath='{.data.password}' | base64 -d; echo
 
-echo "###################### Done ######################"
-# echo "Wait for deployement of GitLab"
-# sudo kubectl wait -n gitlab --for=condition=available deployment --all --timeout=-1s
-
-
 kubectl port-forward --address 0.0.0.0 svc/gitlab-webservice-default -n gitlab 8085:8181 | kubectl port-forward --address 0.0.0.0 svc/argocd-server -n argocd 8080:443 
+
+echo "###################### Done ######################"
