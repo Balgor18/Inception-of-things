@@ -43,4 +43,5 @@ echo "###################### Done ######################"
 # echo "Wait for deployement of GitLab"
 # sudo kubectl wait -n gitlab --for=condition=available deployment --all --timeout=-1s
 
-kubectl port-forward --address 0.0.0.0 svc/webservice -n gitlab 8080:443 &
+
+kubectl port-forward --address 0.0.0.0 svc/gitlab-webservice-default -n gitlab 8085:8181 | kubectl port-forward --address 0.0.0.0 svc/argocd-server -n argocd 8080:443 
