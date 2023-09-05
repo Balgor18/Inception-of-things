@@ -6,12 +6,12 @@ chmod 700 get_helm.sh
 ./get_helm.sh
 
 echo "###################### Install Gitlab ######################"
-sudo kubectl create namespace gitlab
-sudo helm repo add gitlab https://charts.gitlab.io/
+kubectl create namespace gitlab
+helm repo add gitlab https://charts.gitlab.io/
 
-sudo helm repo update
+helm repo update
 
-sudo helm upgrade --install gitlab gitlab/gitlab \
+helm upgrade --install gitlab gitlab/gitlab \
   --timeout 600s \
   --set global.hosts.domain=gitlab.fcatinau.com \
   --set certmanager-issuer.email=fcatinau@student.42.fr \
@@ -20,10 +20,10 @@ sudo helm upgrade --install gitlab gitlab/gitlab \
   --set gitlab-runner.install="false" -n gitlab
 
 
-sudo kubectl wait -n gitlab --for=condition=available deployment --all --timeout=-1s
+kubectl wait -n gitlab --for=condition=available deployment --all --timeout=-1s
 
 echo -n "User : root Password : "
-sudo kubectl get secret -n gitlab gitlab-gitlab-initial-root-password -o jsonpath='{.data.password}' | base64 -d; echo
+kubectl get secret -n gitlab gitlab-gitlab-initial-root-password -o jsonpath='{.data.password}' | base64 -d; echo
 
 kubectl port-forward --address 0.0.0.0 svc/gitlab-webservice-default -n gitlab 8085:8181 | kubectl port-forward --address 0.0.0.0 svc/argocd-server -n argocd 8080:443 
 
