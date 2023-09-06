@@ -2,8 +2,8 @@
 
 echo "###################### Install Docker ######################"
 
-snap install docker > /dev/null
-snap install kubectl --classic > /dev/null
+snap install docker 2>&1 > /dev/null
+snap install kubectl --classic 2>&1 > /dev/null
 
 echo "###################### Install K3d ######################"
 

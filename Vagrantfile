@@ -19,7 +19,7 @@ Vagrant.configure("2") do |config|
   config.vm.provider "virtualbox" do |vb|
     vb.memory = memory # Need to up the size or vboxmanage return an error
     vb.cpus = cpus
-    vb.gui = true
+    # vb.gui = true
     vb.customize ['modifyvm', :id, '--nested-hw-virt', 'on']
     vb.customize ["modifyvm", :id, "--accelerate3d", "off"]
   end
@@ -30,12 +30,23 @@ Vagrant.configure("2") do |config|
     iOT.vm.synced_folder "p2/", "/vagrant/p2"
     iOT.vm.synced_folder "p3/", "/vagrant/p3"
     iOT.vm.synced_folder "bonus/", "/vagrant/bonus"
-    iOT.vm.synced_folder "install/", "/vagrant/config"
     iOT.vm.provision "shell", privileged: true, path: "install/install_vagrant.sh"
+    iOT.vm.provision "shell", inline: <<-SHELL
+    echo "1/4"
+    SHELL
     iOT.vm.provision "shell", privileged: true, path: "install/p2/modif_host_file.sh"
+    iOT.vm.provision "shell", inline: <<-SHELL
+    echo "2/4"
+    SHELL
     iOT.vm.provision "shell", privileged: true, path: "install/install_part3.sh"
+    iOT.vm.provision "shell", inline: <<-SHELL
+    echo "3/4"
+    SHELL
     iOT.vm.provision "shell", privileged: true, path: "install/install_bonus.sh"
-    iOT.vm.provision "shell", privileged: true, path: "install/install_graph_mod.sh"
+    iOT.vm.provision "shell", inline: <<-SHELL
+    echo "4/4"
+    SHELL
+    # iOT.vm.provision "shell", privileged: true, path: "install/install_graph_mod.sh"
 end
 
   # Disable automatic box update checking. If you disable this, then

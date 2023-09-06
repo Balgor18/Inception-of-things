@@ -2,7 +2,7 @@
 cpus           = ENV['CPUS'] || 2
 memory         = ENV['MEMORY'] || 2048
 
-BOX            = ENV['VERSION'] || "generic/alpine38"
+BOX            = ENV['VERSION'] || "generic/alpine37" # Check for mprobably modif the version of alpine because k3s is not working in 38
 SERVER_NAME    = "fcatinauS"
 WORKER_NAME    = "fcatinauSW"
 SERVER_IP      = "192.168.56.110"
