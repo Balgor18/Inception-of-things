@@ -13,6 +13,7 @@ Vagrant.configure("2") do |config|
         end
 
         config.vm.define SERVER_NAME do |viportenS|
+            viportenS.vm.network "forwarded_port", guest: 80, host: 80
             viportenS.vm.hostname = SERVER_NAME
             viportenS.vm.synced_folder ".", "/vagrant"
             viportenS.vm.network "private_network", ip: SERVER_IP

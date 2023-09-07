@@ -46,6 +46,8 @@ Vagrant.configure("2") do |config|
     iOT.vm.provision "shell", inline: <<-SHELL
     echo "4/4"
     SHELL
+    iOT.vm.network "forwarded_port", guest: 8080, host: 8080
+    iOT.vm.network "forwarded_port", guest: 8085, host: 8085
     # iOT.vm.provision "shell", privileged: true, path: "install/install_graph_mod.sh"
 end
 

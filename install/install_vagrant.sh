@@ -2,7 +2,7 @@
 
 echo "###################### Install Virtual Box ######################"
 
-apt update 2>&1  > /dev/null
+apt update 2>&1 > /dev/null
 apt install virtualbox -y 2>&1 > /dev/null
 apt install virtualbox—ext–pack -y 2>&1 > /dev/null
 

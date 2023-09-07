@@ -12,3 +12,9 @@ wget -q -O - https://raw.githubusercontent.com/k3d-io/k3d/main/install.sh | TAG=
 echo "alias k='kubectl'" >> /etc/profile.d/00-aliases.sh # Check if really need
 
 echo "###################### Install Done ######################"
+
+echo "###################### Add dockerGroup ######################"
+groupadd docker
+usermod -aG docker vagrant
+
+echo "###################### Done ######################"
